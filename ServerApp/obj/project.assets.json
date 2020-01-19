@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josh\\Desktop\\SportsStore\\ServerApp\\ServerApp.csproj",
+      "projectUniqueName": "C:\\dev\\Angular.NET-2\\ServerApp\\ServerApp.csproj",
       "projectName": "ServerApp",
-      "projectPath": "C:\\Users\\josh\\Desktop\\SportsStore\\ServerApp\\ServerApp.csproj",
+      "projectPath": "C:\\dev\\Angular.NET-2\\ServerApp\\ServerApp.csproj",
       "packagesPath": "C:\\Users\\josh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josh\\Desktop\\SportsStore\\ServerApp\\obj\\",
+      "outputPath": "C:\\dev\\Angular.NET-2\\ServerApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
