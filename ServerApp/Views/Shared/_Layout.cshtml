@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿@*<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -45,4 +45,19 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
+</html>*@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <base href="/" />
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>SportsStore</title>
+        <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="bg-dark text-white p-2">SportsStore</h2>
+        @RenderBody()
+        @RenderSection("Scripts", required: false)
+    </body>
 </html>

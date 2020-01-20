@@ -1,8 +1,17 @@
-﻿@{
+﻿@*@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+</div>*@
+@section scripts {
+    @*bundle-files*@
+    <script src="runtime.js"></script>
+    <script src="polyfill.js"></script>
+    <script src="styles.js"></script>
+    <script src="vendor.js"></script>
+    <script src="main.js"></script>
+}
+<app-root></app-root>

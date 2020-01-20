@@ -21,7 +21,8 @@ namespace ServerApp.Controllers
         public IActionResult Index()
         {
             //return View();
-            return View("Placeholder");
+            //return View("Placeholder");
+            return View();
         }
 
         public IActionResult Privacy()

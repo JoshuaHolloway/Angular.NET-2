@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.SpaServices.AngularCli;
 
 namespace ServerApp
 {
@@ -51,6 +52,16 @@ namespace ServerApp
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
+
+            // added - only used in dev.
+            app.UseSpa(spa => { // spa is a configuration object
+
+                // specify the location of the Angular project
+                spa.Options.SourcePath = "../ClientApp";
+
+                // specify the npm command used to start the Angular dev tools
+                spa.UseAngularCliServer("start");
             });
         }
     }
