@@ -10,6 +10,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 
+// 04
+using ServerApp.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace ServerApp
 {
     public class Startup
@@ -24,11 +28,17 @@ namespace ServerApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // 04
+            string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
+
+
             services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        //public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider services) // 04
         {
             if (env.IsDevelopment())
             {
@@ -63,6 +73,9 @@ namespace ServerApp
                 // specify the npm command used to start the Angular dev tools
                 spa.UseAngularCliServer("start");
             });
+
+            // 04
+            SeedData.SeedDatabase(services.GetRequiredService<DataContext>());
         }
     }
 }
