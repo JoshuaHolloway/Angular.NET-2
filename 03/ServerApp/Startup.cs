@@ -54,13 +54,10 @@ namespace ServerApp
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            // added - only used in dev.
-            app.UseSpa(spa => { // spa is a configuration object
-
-                // specify the location of the Angular project
+            // 03
+            app.UseSpa(spa =>
+            {
                 spa.Options.SourcePath = "../ClientApp";
-
-                // specify the npm command used to start the Angular dev tools
                 spa.UseAngularCliServer("start");
             });
         }
