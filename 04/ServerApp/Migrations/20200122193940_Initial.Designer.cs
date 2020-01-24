@@ -10,7 +10,7 @@ using ServerApp.Models;
 namespace ServerApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200121023422_Initial")]
+    [Migration("20200122193940_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,7 +38,7 @@ namespace ServerApp.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(8,2)");
+                        .HasColumnType("decimal(8, 2)");
 
                     b.Property<long?>("SupplierId")
                         .HasColumnType("bigint");
@@ -94,7 +94,7 @@ namespace ServerApp.Migrations
             modelBuilder.Entity("ServerApp.Models.Product", b =>
                 {
                     b.HasOne("ServerApp.Models.Supplier", "Supplier")
-                        .WithMany("Product")
+                        .WithMany("Products")
                         .HasForeignKey("SupplierId");
                 });
 

@@ -30,7 +30,7 @@ namespace ServerApp.Migrations
                     Name = table.Column<string>(nullable: true),
                     Category = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
-                    Price = table.Column<decimal>(type: "decimal(8,2)", nullable: false),
+                    Price = table.Column<decimal>(type: "decimal(8, 2)", nullable: false),
                     SupplierId = table.Column<long>(nullable: true)
                 },
                 constraints: table =>

@@ -1,16 +1,11 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Threading.Tasks;
+namespace ServerApp.Models {
+    public class Rating {
 
-namespace ServerApp.Models
-{
-    public class Rating
-    {
-        public long RatingId { get; set; }// Primary Key
+        public long RatingId { get; set; }
 
-        public int Stars { get; set; } // Regular property used to store a rating from a customer
+        public int Stars { get; set; }
 
-        public Product Product { get; set; } // Navigation property used to relate a Rating object to a Product object
+        public Product Product { get; set; }
+
     }
 }

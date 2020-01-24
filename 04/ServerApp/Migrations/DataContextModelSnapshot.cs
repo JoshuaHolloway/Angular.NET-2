@@ -36,7 +36,7 @@ namespace ServerApp.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(8,2)");
+                        .HasColumnType("decimal(8, 2)");
 
                     b.Property<long?>("SupplierId")
                         .HasColumnType("bigint");
@@ -92,7 +92,7 @@ namespace ServerApp.Migrations
             modelBuilder.Entity("ServerApp.Models.Product", b =>
                 {
                     b.HasOne("ServerApp.Models.Supplier", "Supplier")
-                        .WithMany("Product")
+                        .WithMany("Products")
                         .HasForeignKey("SupplierId");
                 });
 
